@@ -7,11 +7,11 @@ The key idea is to leverage the learning capability of SGP to construct a varian
 ![GP-MPPI-Architecture](media/GP-MPPI-Architecture.png)
 
 ## ROS Packages:
-The whole project will be uploaded soon. However, We are referring to our related repository of the baselines, namely, MPPI and log-MPPI.
+The whole project will be uploaded soon. However, We are referring to our related repositories of the baselines [(namely, MPPI and log-MPPI)](https://github.com/IhabMohamed/log-MPPI_ros) and [GP perception model](https://github.com/mahmoud-a-ali/vsgp_pcl).
 
 
 ### Primary code maintainer:
-Ihab S. Mohamed (e-mail: mohamedi@iu.edu)\
+Ihab S. Mohamed and Mahmoud Ali (e-mail: {mohamedi, alimaa}@iu.edu)\
 Vehicle Autonomy and Intelligence Lab ([VAIL](https://vail.sice.indiana.edu/))\
 Indiana University - Bloomington, USA
 
