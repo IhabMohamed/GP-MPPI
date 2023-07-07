@@ -6,6 +6,10 @@ The key idea is to leverage the learning capability of SGP to construct a varian
 
 ![GP-MPPI-Architecture](media/GP-MPPI-Architecture.png)
 
+
+## Media:
+**Video**: https://shorturl.at/HOX05 (The updated video with speech is currently being prepared).
+
 ## ROS Packages:
 
 The entire project will be uploaded soon; however, we are currently referring to our related repositories for the baselines [(namely, MPPI and log-MPPI)](https://github.com/IhabMohamed/log-MPPI_ros) and [GP perception model](https://github.com/mahmoud-a-ali/vsgp_pcl).
