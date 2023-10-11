@@ -6,7 +6,21 @@ The key idea is to leverage the learning capability of SGP to construct a varian
 
 ![GP-MPPI-Architecture](media/GP-MPPI-Architecture.png)
 
+## Paper:
 
+Mohamed, Ihab S., Mahmoud Ali, and Lantao Liu. "GP-guided MPPI for Efficient Navigation in Complex Unknown Cluttered Environments." IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023.
+
+Paper: [https://arxiv.org/abs/2306.12369](https://arxiv.org/abs/2307.04019)
+
+Bibtex:
+```
+@article{mohamed2023gp,
+  title={GP-guided MPPI for Efficient Navigation in Complex Unknown Cluttered Environments},
+  author={Mohamed, Ihab S and Ali, Mahmoud and Liu, Lantao},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2023}
+}
+```
 ## Media:
 **Video**: https://youtu.be/et9t8X1wHKI
 
