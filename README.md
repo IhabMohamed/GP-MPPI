@@ -8,6 +8,8 @@ The key idea is to leverage the learning capability of SGP to construct a varian
 
 ## Paper:
 
+If you find this code useful in your research, please cite:
+
 Mohamed, Ihab S., Mahmoud Ali, and Lantao Liu. "GP-guided MPPI for Efficient Navigation in Complex Unknown Cluttered Environments." IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023.
 
 Paper: [https://arxiv.org/abs/2306.12369](https://arxiv.org/abs/2307.04019)
