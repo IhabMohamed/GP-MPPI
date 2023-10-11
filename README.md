@@ -8,7 +8,7 @@ The key idea is to leverage the learning capability of SGP to construct a varian
 
 
 ## Media:
-**Video**: https://youtu.be/et9t8X1wHKI OR https://youtu.be/yDBaRLvAejk.
+**Video**: https://youtu.be/et9t8X1wHKI
 
 ## ROS Packages:
 
