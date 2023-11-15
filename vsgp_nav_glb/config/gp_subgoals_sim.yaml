@@ -1,0 +1,27 @@
+######## Pose PCL #######
+proj_lfrq: 10.0            # frequency to publish occupancy surface 
+oc_srfc_rds : 5            # occupancy surface radius
+org_oc_srfc_rds_viz: 5     # visualization radius of the occupancy surface in rviz
+velodyne_frame: "velodyne"
+scan_frame: "velodyne"
+pcl_skp: 3                 # Downsampling ratio
+
+
+### final goal pose (gl_x, gl_y, gl_yaw)
+gl_x: 4  
+gl_y: 4  
+gl_yaw: 0 
+
+
+### GP and cost function parameters 
+gp_nav_indpts_sz   : 400  # inducing points
+gp_nav_var_thrshld : 0.03 # variance threshold: 0.025, 0.03, 0.035
+
+gap_k_dir       : 4  # direction weighting factor of the cost function
+gap_k_dst       : 5  # distance weighting factor of the cost function
+gp_nav_goal_dst : 5  # distance between the robot and the subgoals
+
+
+
+gp_nav_var_viz     : 5  # visualization radius of the variance surface in rviz
+gp_nav_var_img_viz : False # to show variance surafce as a binary image to tune the variance threshold
