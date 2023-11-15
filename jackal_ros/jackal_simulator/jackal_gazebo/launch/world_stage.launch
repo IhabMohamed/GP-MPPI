@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="use_sim_time" default="true" />
+  <arg name="gui" default="true" />
+  <arg name="headless" default="false" />
+  <arg name="env_name" default="maze1"/>  
+  <arg name="world_name" default="$(find jackal_gazebo)/worlds/$(arg env_name).world" />
+
+  <!-- Short-term hack to support the original front_laser:=true argument for spawning
+       the simulator. This will be removed in favour of using the config:=x arg instead. -->
+  <arg name="front_laser" default="false" />
+  <arg name="default_config" value="front_laser" if="$(arg front_laser)" />
+  <arg name="default_config" value="base" unless="$(arg front_laser)" />
+  <!-- end of hack -->
+
+  <!-- Configuration of Jackal which you would like to simulate.
+       See jackal_description for details. -->
+  <arg name="config" default="vlp_laser" /> 
+  <!-- $(arg default_config) -->
+  
+  <!-- Optionally enable teleop for the simulation -->
+  <arg name="joystick" default="true" />
+
+  <!-- Launch Gazebo with the specified world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="debug" value="0" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="use_sim_time" value="$(arg use_sim_time)" />
+    <arg name="headless" value="$(arg headless)" />
+    <arg name="world_name" value="$(arg world_name)" />
+  </include>
+
+  <!-- Spawn Jackal -->
+  <include file="$(find jackal_gazebo)/launch/spawn_jackal.launch">
+    
+    <!-- For Maze 1, MU1 -->
+    <arg name="x" value="-5" /> 
+    <arg name="y" value="-8" /> 
+    <arg name="z" value="1" />
+    <arg name="yaw" value="1" />
+    
+    <!-- For Maze 1, MU2 -->
+    <!-- <arg name="x" value="-6" />
+    <arg name="y" value="8" /> 
+    <arg name="z" value="1" />
+    <arg name="yaw" value="0" /> -->
+    
+    <!-- For default setting -->	    
+    <!-- <arg name="x" value="0" />
+    <arg name="y" value="0" />
+    <arg name="z" value="1" /> -->
+    <!-- <arg name="yaw" value="0" /> -->
+    <arg name="config" value="$(arg config)" />
+    <arg name="joystick" value="$(arg joystick)" />
+  </include>
+
+  <node pkg="message_to_tf" type="message_to_tf" name="msg_to_tf" args="/ground_truth/odom"/>
+</launch>
+
+

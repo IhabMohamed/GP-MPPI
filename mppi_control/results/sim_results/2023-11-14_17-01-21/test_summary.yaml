@@ -1,0 +1,32 @@
+- Initial Pose [m & Rad]: '[-5.03953170345088,-8.1385688076988,0.7809819233955889]'
+- Desired Pose [m & Rad]: '[4.0,4.0,0.7850000000000001]'
+- Max linear Velocity: '1.5'
+- Average linear Velocity: '0.9372957'
+- Max Angular Velocity: '2'
+- Map: Costmap
+  Map Height [m]: '10.0'
+  Map Resolution [m/cell]: '0.05'
+  Map Width [m]: '10.0'
+  Map X/Y-Size [cell]: '200'
+- Parameters: SG Filter
+  Poly. Order: '2'
+  Window Length: '51'
+- 'Distibution Type (0: Normal, 1: Log-Normal)': 0
+- Control Scheme: MPPI
+  Exploration Variance: '1200.0'
+  Gamma or Lambda: '0.572'
+  Num of Trajectories: 2500
+  R: '[3.76315789 3.44578313]'
+  Sampling Rate [Hz]: '30.0'
+  Sigma_du: '[0.023104 0.027556]'
+  Time Horizon [s]: '6'
+  Weights: '[ 2.5  2.5 30. ]'
+- Traveled Distance [m]: '34.36435665282762'
+- Task Completion [%]: '100'
+- 'Recovery Mode ': true
+- Recovery Mode Th [m/s]: 0.55
+- Recovery Mode Percentage[%]: 40.03673094582185
+- Average MPPI Excution Time [ms]: '8.915817548004235'
+- Real Time MPPI: true
+- Reach Local Minima: false
+- Violate Ctrl Constraints: true

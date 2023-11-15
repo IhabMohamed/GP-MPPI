@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- \param "normal_dist" specifies the usage of "normal" or "normal log-normal (NLN)" mixture for sampling the rollouts (namely, MPPI or log-MPPI) -->
+  <arg name="normal_dist" default="true" />
+  <!-- \param "gp_mppi" activates the GP-MPPI control strategy (with a "true" value). Otherwise, the baselines, MPPI or log-MPPI, will be launched based on the value given to "normal_dist" --> 
+  <arg name="gp_mppi" default="false" /> 
+  <!-- \param "recovery_mode" activates the Recovery Mode (RM) of the GP-MPPI control strategy. Accordingly, gp_mppi must be set to true. -->
+  <arg name="recovery_mode" default="false" /> 
+  
+  <!-- Launch the move_base stuck with the 2D costmap node -->
+  <include file="$(find mppi_control)/launch/costmap_launcher.launch" />
+  
+  <!-- Lanuch the MPPI/log-MPPI controller with its parameters -->
+  <include file="$(find mppi_control)/launch/sim_control_launcher.launch">
+    <arg name="normal_dist" value="$(arg normal_dist)"/>
+    <arg name="gp_mppi" value="$(arg gp_mppi)"/>
+    <arg name="recovery_mode" value="$(arg recovery_mode)"/>
+  </include>
+
+  <!-- Launch the robot in Rviz with the specified world --> 
+  <include file="$(find jackal_viz)/launch/view_robot.launch" unless="$(arg gp_mppi)">
+    <arg name="config" default="mppi_costmap_sim" />
+  </include>
+
+</launch>

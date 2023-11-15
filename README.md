@@ -9,6 +9,11 @@ The key idea is to leverage the learning capability of SGP to construct a varian
 ## ROS Packages:
 The whole project will be uploaded soon. However, We are referring to our related repository of the baselines, namely, MPPI and log-MPPI.
 
+# To run GP-MPPI
+1. roslaunch jackal_gazebo world_stage.launch env_name:=forest1 (0.2 tres/m2) OR maze1
+2. roslaunch vsgp_nav_glb mppi_subgoal_sim.launch
+3. roslaunch mppi_control control_stage.launch gp_mppi:=false , gp_mppi:=false means that MPPI or log-mppi will be run 
+
 
 ### Primary code maintainer:
 Ihab S. Mohamed (e-mail: mohamedi@iu.edu)\
