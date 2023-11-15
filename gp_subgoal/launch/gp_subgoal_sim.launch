@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="viz" default="true"/>
+    <arg name="projection" default="true"/>
+    
+    <!-- load yaml file with all gp param -->
+    <rosparam file="$(find gp_subgoal)/config/gp_subgoals_sim.yaml" />
+
+    <!-- pointcloud to occupancy surface node -->
+    <group if="$(arg projection)">
+        <node name="oc_srfc_proj" pkg="gp_subgoal" type="oc_srfc_proj"  output="screen"  >
+            <remap from="/ground_truth/state" to="ground_truth/odom" />
+        </node>
+    </group>
+
+    <!-- gp_subgoal_recommender node  -->
+    <node name="gp_subgoals" pkg="gp_subgoal" type="gp_subgoals_sim.py" output="screen"  >
+    </node> 
+
+    <!-- static transform -->
+    <node pkg="tf" type="static_transform_publisher" name="map_world" args="0 0 0 0 0 0 1 map   world 60"/>
+
+    <!-- rviz -->
+    <group if="$(arg viz)">
+        <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find gp_subgoal)/config/gp_subgoals_sim.rviz"/>
+    </group>
+
+</launch>
