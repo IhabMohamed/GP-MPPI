@@ -21,7 +21,6 @@ from sensor_msgs.msg import PointCloud2
 from sensor_msgs.msg import PointField
 from sensor_msgs import point_cloud2
 from std_msgs.msg import Header
-from gp_subgoal.msg import PclObsv
 from gp_subgoal.msg import PosePcl2
 from geometry_msgs.msg import PoseStamped, PointStamped
 from geometry_msgs.msg import Point
