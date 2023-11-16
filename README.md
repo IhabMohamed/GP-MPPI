@@ -32,8 +32,8 @@ The entire project will be uploaded soon; however, we are currently referring to
 
 # To run GP-MPPI
 1. roslaunch jackal_gazebo world_stage.launch env_name:=forest1 (0.2 tres/m2) OR maze1
-2. roslaunch vsgp_nav_glb mppi_subgoal_sim.launch
-3. roslaunch mppi_control control_stage.launch gp_mppi:=false , gp_mppi:=false means that MPPI or log-mppi will be run 
+2. roslaunch  gp_subgoal gp_subgoal_sim.launch
+4. roslaunch mppi_control control_stage.launch gp_mppi:=true; gp_mppi:=false means that MPPI or log-mppi will be run 
 
 
 ### Primary code maintainer:
