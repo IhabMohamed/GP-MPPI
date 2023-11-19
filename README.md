@@ -26,6 +26,10 @@ Bibtex:
 ## Media:
 **Video**: https://youtu.be/et9t8X1wHKI
 
+## Software Requirements and Installation Instructions:
+ Please refer to the provided guidelines in [our log-MPPI](https://github.com/IhabMohamed/log-MPPI_ros#software-requirements) repository for detailed instructions. 
+
+
 ## ROS Packages:
 
 The entire project will be uploaded soon; however, we are currently referring to our related repositories for the baselines [(namely, MPPI and log-MPPI)](https://github.com/IhabMohamed/log-MPPI_ros) and [GP perception model](https://github.com/mahmoud-a-ali/vsgp_pcl).
