@@ -10,7 +10,7 @@ The key idea is to leverage the learning capability of SGP to construct a varian
 
 If you find this code useful in your research, please cite:
 
-Ihab S. Mohamed, Mahmoud Ali, and Lantao Liu. "GP-guided MPPI for Efficient Navigation in Complex Unknown Cluttered Environments." IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023.
+Ihab S. Mohamed, Mahmoud Ali, and Lantao Liu. "**GP-guided MPPI for Efficient Navigation in Complex Unknown Cluttered Environments**." IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023.
 
 Paper: [https://arxiv.org/abs/2306.12369](https://arxiv.org/abs/2307.04019)
 
@@ -23,16 +23,28 @@ Bibtex:
   year={2023}
 }
 ```
-## Media:
+### Media:
 **Video**: https://youtu.be/et9t8X1wHKI
 
 ## Software Requirements and Installation Instructions:
  Please refer to the provided guidelines in [our log-MPPI](https://github.com/IhabMohamed/log-MPPI_ros#software-requirements) repository for detailed instructions. 
 
-
 ## ROS Packages:
 
 The entire project will be uploaded soon; however, we are currently referring to our related repositories for the baselines [(namely, MPPI and log-MPPI)](https://github.com/IhabMohamed/log-MPPI_ros) and [GP perception model](https://github.com/mahmoud-a-ali/vsgp_pcl).
+
+### jackal_ros
+The `jackal_ros` package contains the common packages for Jackal, including Gazebo simulator with various world definitions and their ROS launch files, robot description, messages, and controllers. 
+
+### mission_control
+This package is forked from [ethz-asl/deep_motion_planning](https://github.com/ethz-asl/deep_motion_planning) with very few modifications. It contains a mission control node that executes a user-defined mission. Therefore, a txt file is parsed and a sequence of commands is generated. This sequence is then processed step-by-step. For more details on the definition of a mission, please refer to the [README](mission_control/README.md) file in the package directory.
+
+### mppi_control
+This node contains the implementation of both vanilla MPPI and log-MPPI control strategies. It subscribes to: (i) the 2D local costmap built by the robot on-board sensor for achieving a collision-free navigation and (ii) the set of desired poses published by the `mission_control` node; then, consequently, it publishes the control commands, namely, the linear and angular velocities of the robot.
+
+### velodyne_simulator
+URDF description and Gazebo plugins to simulate Velodyne laser scanners. If you encountered a very slow-motion of the robot in Gazebo, there are two ways to tackle this issue:
+(i) you should be sure that the `gpu` parameter in [VLP-16.urdf.xacro](velodyne_simulator/velodyne_description/urdf/VLP-16.urdf.xacro) is set to `true` (we actually prefer this option), OR (ii) you can decrease the number of `samples` to let's say 500 instead of 1875 in [VLP-16.urdf.xacro](velodyne_simulator/velodyne_description/urdf/VLP-16.urdf.xacro). 
 
 # To run GP-MPPI
 1. roslaunch jackal_gazebo world_stage.launch env_name:=forest1 (0.2 tres/m2) OR maze1
