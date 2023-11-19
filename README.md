@@ -4,7 +4,7 @@ This repository contains the ROS implementation of the GP-MPPI control strategy,
 
 The key idea is to leverage the learning capability of SGP to construct a variance (uncertainty) surface, enabling the robot to learn about the navigable space surrounding it, identify a set of suggested subgoals, and ultimately recommend the optimal subgoal that minimizes a predefined cost function for the local MPPI planner. MPPI then computes the optimal control sequence that satisfies the robot and collision avoidance constraints. This approach eliminates the need for a global map of the environment or an offline training process.
 
-<img src="media/GP-MPPI-Architecture.png" alt="GP-MPPI-Architecture" width="420"> <img src="media/MU1_SM_T2_2x.gif" alt="Maze 1, Sample Mode (SM)" width="430">
+<img src="media/GP-MPPI-Architecture.png" alt="GP-MPPI-Architecture" width="400"> <img src="media/MU1_SM_T2_2x.gif" alt="Maze 1, Sample Mode (SM)" width="400">
 
 ## Paper:
 
