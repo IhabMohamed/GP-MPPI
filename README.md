@@ -44,7 +44,7 @@ This node encompasses the implementation of vanilla MPPI, log-MPPI, and GP-MPPI 
 
 ### velodyne_simulator
 URDF description and Gazebo plugins to simulate Velodyne laser scanners. If you encountered a very slow-motion of the robot in Gazebo, there are two ways to tackle this issue:
-(i) you should be sure that the `gpu` parameter in [VLP-16.urdf.xacro](<xacro:macro name="VLP-16" params="*origin parent:=base_link name:=velodyne topic:=/velodyne_points organize_cloud:=false hz:=20 lasers:=16 samples:=500 collision_range:=0.2 min_range:=0.3 max_range:=5.0 noise:=0.008 min_angle:=-${M_PI} max_angle:=${M_PI} gpu:=false">) is set to `true` (we actually prefer this option), OR (ii) you can decrease the number of `samples` to let's say 500 instead of 1875 in [VLP-16.urdf.xacro](velodyne_simulator/velodyne_description/urdf/VLP-16.urdf.xacro). 
+(i) you should be sure that the `gpu` parameter in [VLP-16.urdf.xacro](https://github.com/IhabMohamed/GP-MPPI/blob/b7faf0006f1730d14fbecce75b2f87f48c5e7671/velodyne_simulator/velodyne_description/urdf/VLP-16.urdf.xacro#L16) is set to `true` (we actually prefer this option), OR (ii) you can decrease the number of `samples` to let's say 500 instead of 1875 in [VLP-16.urdf.xacro](velodyne_simulator/velodyne_description/urdf/VLP-16.urdf.xacro). 
 
 # To run GP-MPPI
 1. roslaunch jackal_gazebo world_stage.launch env_name:=forest1 (0.2 tres/m2) OR maze1
