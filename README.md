@@ -49,8 +49,8 @@ URDF description and Gazebo plugins to simulate Velodyne laser scanners. To enha
 	```
 	roslaunch jackal_gazebo world_stage.launch env_name:=maze1
 	```
- * `maze1` is a maze-like environment spanning 20 meters by 20 meters, featuring three U-shaped rooms (U1, U2, and U3), along with several additional obstacles.
- * `forest1` is a forest-like environment measuring 50 meters by 50 meters, with a tree density of 0.2 trees per square meter. To create your own forest-like environment, please utilize the [forest_gen](https://github.com/ethz-asl/forest_gen) package.
+ 	* `maze1` is a maze-like environment spanning 20 meters by 20 meters, featuring three U-shaped rooms (U1, U2, and U3), along with several additional obstacles.
+ 	* `forest1` is a forest-like environment measuring 50 meters by 50 meters, with a tree density of 0.2 trees per square meter. To create your own forest-like environment, please utilize the [forest_gen](https://github.com/ethz-asl/forest_gen) package.
 
 2. To start the MPPI or log-MPPI controller, 2D costmap node, and visualization of the system, run:
  	* For MPPI, run:
