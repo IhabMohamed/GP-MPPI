@@ -13,6 +13,7 @@ If you find this code useful in your research, please cite:
 Ihab S. Mohamed, Mahmoud Ali, and Lantao Liu. "**GP-guided MPPI for Efficient Navigation in Complex Unknown Cluttered Environments**." IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023.
 
 Paper: [https://arxiv.org/abs/2306.12369](https://arxiv.org/abs/2307.04019)
+Video: https://youtu.be/et9t8X1wHKI
 
 Bibtex:
 ```
@@ -23,8 +24,6 @@ Bibtex:
   year={2023}
 }
 ```
-
-### Media: https://youtu.be/et9t8X1wHKI
 
 ## Software Requirements and Installation Instructions:
  Please refer to the provided guidelines in [our log-MPPI](https://github.com/IhabMohamed/log-MPPI_ros#software-requirements) repository for detailed instructions. 
