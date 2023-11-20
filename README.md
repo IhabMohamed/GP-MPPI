@@ -72,7 +72,7 @@ URDF description and Gazebo plugins to simulate Velodyne laser scanners. To enha
 	roslaunch mppi_control control_stage.launch gp_mppi:=true recovery_mode:=false
 	```
  
-	* To enable the **recovery mode (RM)**, set `recovery_mode` to `true`.
+		* To enable the **recovery mode (RM)**, set `recovery_mode` to `true`.
 
 ### Primary code maintainer:
 Ihab S. Mohamed and Mahmoud Ali (e-mail: {mohamedi, alimaa}@iu.edu)\
