@@ -56,21 +56,22 @@ URDF description and Gazebo plugins to simulate Velodyne laser scanners. To enha
 	```
  	roslaunch  gp_subgoal gp_subgoal_sim.launch
  	```
+ 	* Note that this package is only activated when **GP-MPPI** is executed, i.e., when the `gp_mppi` argument in the following comment is set to `true`.
 
-4. To start the MPPI or log-MPPI controller, 2D costmap node, and visualization of the system, run:
- 	* For MPPI, run:
+4. To start the MPPI, log-MPPI, or GP-MPPI control strategies, 2D costmap node, and visualization of the system, run:
+ 	* For **MPPI**, run:
 	```
-	roslaunch mppi_control control_stage.launch normal_dist:=true
+	roslaunch mppi_control control_stage.launch normal_dist:=true gp_mppi:=false
 	```
-	* For log-MPPI, run:
+	* For **log-MPPI**, run:
 	```
-	roslaunch mppi_control control_stage.launch normal_dist:=false
+	roslaunch mppi_control control_stage.launch normal_dist:=false gp_mppi:=false
 	```
-
-1. roslaunch jackal_gazebo world_stage.launch env_name:=forest1 (0.2 tres/m2) OR maze1
-2. roslaunch  gp_subgoal gp_subgoal_sim.launch
-4. roslaunch mppi_control control_stage.launch gp_mppi:=true; gp_mppi:=false means that MPPI or log-mppi will be run 
-
+ 	* To execute **GP-MPPI** with the **sample mode (SM)**, run: 
+	```
+	roslaunch mppi_control control_stage.launch gp_mppi:=true recovery_mode:=false
+	```
+ 		* To enable the **recovery mode (RM)**, set `recovery_mode` to `true`.
 
 ### Primary code maintainer:
 Ihab S. Mohamed and Mahmoud Ali (e-mail: {mohamedi, alimaa}@iu.edu)\
