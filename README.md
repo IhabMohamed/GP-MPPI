@@ -45,8 +45,7 @@ The [`mppi_control`](https://github.com/IhabMohamed/GP-MPPI/tree/main/mppi_contr
 URDF description and Gazebo plugins to simulate Velodyne laser scanners. To enhance the **_real-time_** performance of the GP-subgoal recommender node (`gp_subgoal`), we've reduced the sample count to 500 (namely, `samples:=500`) from the original 1875 in [VLP-16.urdf.xacro](https://github.com/IhabMohamed/GP-MPPI/blob/b7faf0006f1730d14fbecce75b2f87f48c5e7671/velodyne_simulator/velodyne_description/urdf/VLP-16.urdf.xacro#L16).
 
 ## Usage: 
-1. 
-To initiate the Gazebo simulation with Jackal in the provided cluttered environment, execute:
+1. To initiate the Gazebo simulation with Jackal in the provided cluttered environment, execute:
 	```
 	roslaunch jackal_gazebo world_stage.launch env_name:=maze1
 	```
