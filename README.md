@@ -24,8 +24,7 @@ Bibtex:
 }
 ```
 
-### Media:
-	**Video**: https://youtu.be/et9t8X1wHKI
+### Media: https://youtu.be/et9t8X1wHKI
 
 ## Software Requirements and Installation Instructions:
  Please refer to the provided guidelines in [our log-MPPI](https://github.com/IhabMohamed/log-MPPI_ros#software-requirements) repository for detailed instructions. 
@@ -71,8 +70,7 @@ URDF description and Gazebo plugins to simulate Velodyne laser scanners. To enha
 	```
 	roslaunch mppi_control control_stage.launch gp_mppi:=true recovery_mode:=false
 	```
- 
-		* To enable the **recovery mode (RM)**, set `recovery_mode` to `true`.
+    	To enable the **recovery mode (RM)**, set `recovery_mode` to `true`.
 
 ### Primary code maintainer:
 Ihab S. Mohamed and Mahmoud Ali (e-mail: {mohamedi, alimaa}@iu.edu)\
